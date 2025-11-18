@@ -56,7 +56,7 @@
     )
     // {
       overlays.default = final: prev: {
-        vicinae = self.packages.${final.system}.default;
+        vicinae = self.packages.${final.stdenv.hostPlatform.system}.default;
         mkVicinaeExtension = import ./nix/mkVicinaeExtension.nix;
       };
       homeManagerModules.default = import ./nix/module.nix self;
